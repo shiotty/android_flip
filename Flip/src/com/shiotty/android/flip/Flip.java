@@ -46,11 +46,11 @@ public class Flip extends Activity implements
         mPhotosList.setAdapter(adapter);
         mPhotosList.setOnItemClickListener(this);
 
-        // 戻るボタンの設定
+        // Back button setting
         Button mBackBtn = (Button) findViewById(R.id.back_btn);
         mBackBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-            	// 0度から-90度に移動する
+            	// Rotate 0 to -90
 				applyRotation(-1, 0, -90);
             }
         });
@@ -131,7 +131,7 @@ public class Flip extends Activity implements
                 mPhotosList.setVisibility(View.GONE);
                 mRelativeLayout.setVisibility(View.VISIBLE);
                 mRelativeLayout.requestFocus();
-                // -90度から0度に回転する。
+                // Rotate -90 to 0
                 rotation = new Rotate3dAnimation(-90, 0, centerX, centerY, 310.0f, false);
                 //rotation = new Rotate3dAnimation(90, 180, centerX, centerY, 310.0f, false);
                 
